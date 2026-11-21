@@ -1,0 +1,1087 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Inges Melati — Portofolio Kewirausahaan & Karya Kreatif</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600&family=La+Belle+Aurore&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-cream: #fcf8f5;
+      --bg-blush: #f7e6e8;
+      --bg-soft-pink: #f4d9dd;
+      --berry: #b85c72;
+      --berry-dark: #9c465b;
+      --berry-light: #e7b8c2;
+      --text-dark: #2c1e22;
+      --text-muted: #6b545a;
+      --border-soft: rgba(184, 92, 114, 0.18);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      color: var(--text-dark);
+      background-color: var(--bg-cream);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    .script-tag {
+      font-family: 'La Belle Aurore', cursive;
+      font-size: 1.45rem;
+      color: var(--berry);
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .serif-heading {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 700;
+      line-height: 1.12;
+      color: var(--text-dark);
+    }
+
+    .serif-heading em {
+      font-style: italic;
+      color: var(--berry);
+      font-weight: 600;
+    }
+
+    .container {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 0 28px;
+    }
+
+    .btn-berry {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 12px 26px;
+      border-radius: 999px;
+      background: var(--berry);
+      color: #fff;
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 600;
+      border: none;
+      cursor: pointer;
+      box-shadow: 0 10px 24px rgba(184, 92, 114, 0.25);
+      transition: all 0.25s ease;
+    }
+
+    .btn-berry:hover {
+      background: var(--berry-dark);
+      transform: translateY(-2px);
+    }
+
+    .btn-outline-berry {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 11px 22px;
+      border-radius: 999px;
+      background: transparent;
+      color: var(--text-dark);
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 600;
+      transition: color 0.2s ease;
+    }
+
+    .btn-outline-berry:hover {
+      color: var(--berry);
+    }
+
+    .navbar {
+      background: linear-gradient(135deg, #f9eced 0%, #f3dde1 100%);
+      padding: 18px 0;
+      border-bottom: 1px solid rgba(184, 92, 114, 0.1);
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      backdrop-filter: blur(10px);
+    }
+
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .brand {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.7rem;
+      font-weight: 700;
+      color: var(--text-dark);
+      text-decoration: none;
+    }
+
+    .nav-menu {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+
+    .nav-menu a {
+      text-decoration: none;
+      color: var(--text-dark);
+      font-size: 0.9rem;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+
+    .nav-menu a:hover {
+      color: var(--berry);
+    }
+
+    .hero-section {
+      background: linear-gradient(135deg, #f9eced 0%, #f3dde1 55%, #f7e6e9 100%);
+      padding: 54px 0 64px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.05fr 0.95fr;
+      gap: 44px;
+      align-items: center;
+    }
+
+    .hero-title {
+      font-size: 3.35rem;
+      margin: 8px 0 18px;
+    }
+
+    .hero-desc {
+      font-size: 1.02rem;
+      color: var(--text-muted);
+      max-width: 470px;
+      margin-bottom: 28px;
+    }
+
+    .hero-cta-group {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .hero-visual {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .organic-blob {
+      position: absolute;
+      width: 340px;
+      height: 360px;
+      background: #ecc7cf;
+      border-radius: 56% 44% 62% 38% / 44% 58% 42% 56%;
+      z-index: 0;
+      transform: rotate(-8deg);
+    }
+
+    .hero-photo-frame {
+      position: relative;
+      z-index: 1;
+      width: 310px;
+      height: 365px;
+      border-radius: 160px 160px 26px 26px;
+      overflow: hidden;
+      border: 6px solid #fff;
+      box-shadow: 0 22px 45px rgba(130, 58, 76, 0.18);
+      background: #e9d8d5;
+    }
+
+    .hero-photo-frame img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 15%;
+      display: block;
+    }
+
+    .handwritten-note {
+      position: absolute;
+      top: 12px;
+      right: 4px;
+      z-index: 2;
+      font-family: 'La Belle Aurore', cursive;
+      font-size: 1.35rem;
+      line-height: 1.1;
+      color: var(--text-muted);
+      transform: rotate(-8deg);
+      text-align: center;
+    }
+
+    .circular-stamp {
+      position: absolute;
+      bottom: -14px;
+      right: 12px;
+      z-index: 2;
+      width: 88px;
+      height: 88px;
+      border-radius: 50%;
+      background: #fff;
+      border: 1.5px solid var(--berry-light);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.62rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--berry);
+      text-align: center;
+      padding: 6px;
+    }
+
+    .circular-stamp span {
+      font-size: 1.15rem;
+      margin: 2px 0;
+    }
+
+    .featured-strip {
+      background: #fff;
+      border-top: 1px solid var(--border-soft);
+      border-bottom: 1px solid var(--border-soft);
+      padding: 20px 0;
+    }
+
+    .featured-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .featured-label {
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+    }
+
+    .featured-items {
+      display: flex;
+      align-items: center;
+      gap: 32px;
+      flex-wrap: wrap;
+    }
+
+    .featured-items span {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: #4a353b;
+      opacity: 0.85;
+    }
+
+    .section-block {
+      padding: 72px 0;
+    }
+
+    .section-header-center {
+      text-align: center;
+      margin-bottom: 42px;
+      position: relative;
+    }
+
+    .section-header-center h2 {
+      font-size: 2.3rem;
+      margin-bottom: 6px;
+    }
+
+    .section-header-center p {
+      font-size: 0.94rem;
+      color: var(--text-muted);
+    }
+
+    .work-grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+    }
+
+    .work-card {
+      background: #fff;
+      border-radius: 18px;
+      overflow: hidden;
+      border: 1px solid var(--border-soft);
+      box-shadow: 0 12px 30px rgba(44, 30, 34, 0.04);
+      transition: transform 0.25s ease;
+    }
+
+    .work-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .work-cover {
+      height: 200px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+      text-align: center;
+      position: relative;
+    }
+
+    .work-cover.bg-1 {
+      background: linear-gradient(135deg, #f3d7dc 0%, #e7bcc5 100%);
+    }
+
+    .work-cover.bg-2 {
+      background: linear-gradient(135deg, #e8dfd5 0%, #d8c7b8 100%);
+    }
+
+    .work-cover.bg-3 {
+      background: linear-gradient(135deg, #f5e6e0 0%, #ebd1c8 100%);
+    }
+
+    .work-mockup-box {
+      background: rgba(255, 255, 255, 0.92);
+      border-radius: 12px;
+      padding: 18px 20px;
+      width: 85%;
+      box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
+      border: 1px solid rgba(184, 92, 114, 0.15);
+    }
+
+    .work-mockup-box .emoji-big {
+      font-size: 2.1rem;
+      display: block;
+      margin-bottom: 6px;
+    }
+
+    .work-mockup-box span {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--text-dark);
+    }
+
+    .work-body {
+      padding: 22px 24px 24px;
+    }
+
+    .work-category {
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--berry);
+      margin-bottom: 6px;
+      display: block;
+    }
+
+    .work-body h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.45rem;
+      margin-bottom: 8px;
+      color: var(--text-dark);
+    }
+
+    .work-body p {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      margin-bottom: 14px;
+    }
+
+    .work-link {
+      font-size: 0.84rem;
+      font-weight: 600;
+      color: var(--berry);
+      text-decoration: none;
+    }
+
+    .about-split-section {
+      padding: 40px 0 72px;
+      background: linear-gradient(180deg, var(--bg-cream) 0%, #fbf2f3 100%);
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1.25fr 0.85fr;
+      gap: 36px;
+      align-items: center;
+    }
+
+    .about-text h2 {
+      font-size: 2.55rem;
+      margin: 4px 0 6px;
+    }
+
+    .about-subtitle {
+      font-size: 0.92rem;
+      font-weight: 600;
+      color: var(--berry);
+      margin-bottom: 16px;
+    }
+
+    .about-text p {
+      font-size: 0.94rem;
+      color: var(--text-muted);
+      margin-bottom: 14px;
+    }
+
+    .berry-stats-stack {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .berry-stat-box {
+      background: var(--berry);
+      color: #fff;
+      border-radius: 18px;
+      padding: 22px 24px;
+      box-shadow: 0 12px 26px rgba(184, 92, 114, 0.22);
+      transition: transform 0.2s ease;
+    }
+
+    .berry-stat-box:hover {
+      transform: translateY(-3px);
+    }
+
+    .berry-stat-top {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.75rem;
+      font-weight: 700;
+      line-height: 1.1;
+    }
+
+    .berry-stat-box p {
+      font-size: 0.86rem;
+      opacity: 0.92;
+      margin-top: 4px;
+    }
+
+    .skills-4-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+      text-align: center;
+    }
+
+    .skill-item {
+      padding: 20px 14px;
+      border-right: 1px solid var(--border-soft);
+    }
+
+    .skill-item:last-child {
+      border-right: none;
+    }
+
+    .skill-circle-icon {
+      width: 52px;
+      height: 52px;
+      margin: 0 auto 14px;
+      border-radius: 50%;
+      background: var(--berry);
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.25rem;
+      box-shadow: 0 8px 18px rgba(184, 92, 114, 0.24);
+    }
+
+    .skill-item h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.3rem;
+      margin-bottom: 8px;
+    }
+
+    .skill-item p {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+
+    .quote-banner-section {
+      padding: 20px 0 72px;
+    }
+
+    .quote-berry-card {
+      background: var(--berry);
+      border-radius: 26px;
+      padding: 38px 42px;
+      color: #fff;
+      display: grid;
+      grid-template-columns: 1fr 1.15fr;
+      gap: 32px;
+      align-items: center;
+      box-shadow: 0 20px 45px rgba(184, 92, 114, 0.25);
+    }
+
+    .quote-mark {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 3.4rem;
+      line-height: 0.6;
+      opacity: 0.65;
+      margin-bottom: 10px;
+      display: block;
+    }
+
+    .quote-text {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.65rem;
+      line-height: 1.35;
+      margin-bottom: 14px;
+    }
+
+    .quote-author {
+      font-size: 0.86rem;
+      opacity: 0.88;
+    }
+
+    .moodboard-3-photos {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+    }
+
+    .mood-tile {
+      background: #fdf6f2;
+      color: var(--text-dark);
+      border-radius: 16px;
+      padding: 22px 12px;
+      text-align: center;
+      border: 3px solid rgba(255, 255, 255, 0.85);
+      box-shadow: 0 10px 22px rgba(0, 0, 0, 0.12);
+    }
+
+    .mood-tile span {
+      font-size: 2rem;
+      display: block;
+      margin-bottom: 8px;
+    }
+
+    .mood-tile strong {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.05rem;
+      display: block;
+    }
+
+    .mood-tile small {
+      font-size: 0.76rem;
+      color: var(--text-muted);
+    }
+
+    .process-section {
+      padding: 20px 0 80px;
+    }
+
+    .edu-process-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 22px;
+    }
+
+    .edu-step {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      background: #fff;
+      padding: 20px 18px;
+      border-radius: 18px;
+      border: 1px solid var(--border-soft);
+      box-shadow: 0 8px 22px rgba(44, 30, 34, 0.03);
+    }
+
+    .step-badge {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background: var(--berry);
+      color: #fff;
+      font-size: 0.82rem;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    .edu-step h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.32rem;
+      margin-bottom: 3px;
+    }
+
+    .edu-step p {
+      font-size: 0.86rem;
+      color: var(--text-muted);
+      line-height: 1.45;
+    }
+
+    .contact-footer {
+      background: linear-gradient(135deg, #f9eced 0%, #f3dde1 100%);
+      padding: 68px 0 54px;
+      border-top: 1px solid rgba(184, 92, 114, 0.14);
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 1fr 0.85fr;
+      gap: 32px;
+      align-items: center;
+    }
+
+    .footer-cta h2 {
+      font-size: 2.35rem;
+      margin: 4px 0 12px;
+    }
+
+    .footer-cta p {
+      font-size: 0.92rem;
+      color: var(--text-muted);
+      margin-bottom: 22px;
+    }
+
+    .contact-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .contact-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      font-size: 0.9rem;
+      color: var(--text-dark);
+    }
+
+    .contact-icon-dot {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      background: rgba(184, 92, 114, 0.14);
+      color: var(--berry);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      font-size: 0.88rem;
+    }
+
+    .contact-list a {
+      color: var(--text-dark);
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .contact-list a:hover {
+      color: var(--berry);
+    }
+
+    .footer-note-card {
+      background: #fffdfb;
+      border: 1.5px dashed var(--berry-light);
+      border-radius: 16px;
+      padding: 26px 22px;
+      text-align: center;
+      transform: rotate(2deg);
+      box-shadow: 0 12px 28px rgba(184, 92, 114, 0.1);
+      position: relative;
+    }
+
+    .footer-note-card p {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: var(--text-dark);
+      line-height: 1.4;
+    }
+
+    .footer-note-card span {
+      display: inline-block;
+      margin-top: 10px;
+      color: var(--berry);
+      font-size: 1.2rem;
+    }
+
+    .copyright-bar {
+      text-align: center;
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      margin-top: 44px;
+      padding-top: 20px;
+      border-top: 1px solid rgba(184, 92, 114, 0.14);
+    }
+
+    @media (max-width: 960px) {
+      .hero-grid,
+      .about-grid,
+      .quote-berry-card,
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+      .work-grid-3 {
+        grid-template-columns: 1fr;
+      }
+      .skills-4-grid,
+      .edu-process-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .skill-item {
+        border-right: none;
+        border-bottom: 1px solid var(--border-soft);
+      }
+    }
+
+    @media (max-width: 580px) {
+      .hero-title {
+        font-size: 2.55rem;
+      }
+      .skills-4-grid,
+      .edu-process-grid,
+      .moodboard-3-photos {
+        grid-template-columns: 1fr;
+      }
+      .hero-photo-frame {
+        width: 260px;
+        height: 310px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="navbar">
+    <div class="container nav-inner">
+      <a href="#top" class="brand">Inges Melati</a>
+      <nav class="nav-menu">
+        <a href="#karya">Karya & Keahlian</a>
+        <a href="#tentang">Tentang Saya</a>
+        <a href="#pendidikan">Pendidikan</a>
+        <a href="#kontak" class="btn-berry" style="padding: 8px 18px; font-size: 0.84rem;">Hubungi Saya →</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero-section" id="top">
+    <div class="container hero-grid">
+      <div>
+        <span class="script-tag">Hai, Saya Inges Melati ♡</span>
+        <h1 class="serif-heading hero-title">
+          Merangkai ide <em>kreatif</em> dan semangat wirausaha.
+        </h1>
+        <p class="hero-desc">
+          Mahasiswi Jurusan Kewirausahaan, Fakultas Ekonomi dan Bisnis Islam (FEBI) — UIN Mataram yang antusias dalam kriya tekstil, organisasi kampus, serta kegiatan aktif.
+        </p>
+        <div class="hero-cta-group">
+          <a href="#karya" class="btn-berry">Lihat Karya & Keahlian →</a>
+          <a href="#tentang" class="btn-outline-berry">Tentang Saya ♡</a>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <div class="organic-blob" aria-hidden="true"></div>
+        <div class="handwritten-note">berkarya<br>dengan<br>hati ♡</div>
+        <div class="hero-photo-frame">
+          <img src="melati.jpg.jpeg" alt="Foto Profil Inges Melati" />
+        </div>
+        <div class="circular-stamp">
+          KEWIRAUSAHAAN
+          <span>♥</span>
+          UIN MATARAM
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="featured-strip">
+    <div class="container featured-row">
+      <span class="featured-label">AKTIF DI KAMPUS</span>
+      <div class="featured-items">
+        <span>HMPS Kewirausahaan</span>
+        <span>•</span>
+        <span>Panitia Festival Budaya</span>
+        <span>•</span>
+        <span>Panitia Makrab</span>
+        <span>•</span>
+        <span>Panitia PBAK</span>
+      </div>
+    </div>
+  </div>
+
+  <section class="section-block" id="karya">
+    <div class="container">
+      <div class="section-header-center">
+        <h2 class="serif-heading">✦ Karya & Kreativitas Saya</h2>
+        <p>Eksplorasi kriya tekstil, kerajinan tangan, dan aktivitas kreatif.</p>
+      </div>
+
+      <div class="work-grid-3">
+        <article class="work-card">
+          <div class="work-cover bg-1">
+            <div class="work-mockup-box">
+              <span class="emoji-big">🌿</span>
+              <span>Ecoprint & Batik Jumputan</span>
+            </div>
+          </div>
+          <div class="work-body">
+            <span class="work-category">KRIYA TEKSTIL ALAMI</span>
+            <h3>Ecoprint & Batik Jumputan</h3>
+            <p>Eksplorasi motif daun alami dan teknik ikat celup warna pada kain untuk menghasilkan karya bernilai jual.</p>
+            <a href="#keahlian" class="work-link">Lihat Detail Keahlian →</a>
+          </div>
+        </article>
+
+        <article class="work-card">
+          <div class="work-cover bg-2">
+            <div class="work-mockup-box">
+              <span class="emoji-big">👕</span>
+              <span>Sablon Baju Custom</span>
+            </div>
+          </div>
+          <div class="work-body">
+            <span class="work-category">PRODUKSI & DESAIN KAOS</span>
+            <h3>Sablon Baju</h3>
+            <p>Teknik cetak sablon pakaian dengan desain kreatif yang mendukung pengembangan produk kewirausahaan.</p>
+            <a href="#keahlian" class="work-link">Lihat Detail Keahlian →</a>
+          </div>
+        </article>
+
+        <article class="work-card">
+          <div class="work-cover bg-3">
+            <div class="work-mockup-box">
+              <span class="emoji-big">🧶</span>
+              <span>Kerajinan Tangan & Kuliner</span>
+            </div>
+          </div>
+          <div class="work-body">
+            <span class="work-category">KREATIVITAS & HOBI</span>
+            <h3>Kerajinan Tangan & Memasak</h3>
+            <p>Membuat berbagai produk kerajinan tangan unik serta menyalurkan kreativitas di bidang kuliner dan memasak.</p>
+            <a href="#keahlian" class="work-link">Lihat Detail Keahlian →</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="about-split-section" id="tentang">
+    <div class="container about-grid">
+      <div class="about-text">
+        <span class="script-tag">Senang berkenalan ♡</span>
+        <h2 class="serif-heading">Saya Inges Melati</h2>
+        <div class="about-subtitle">Jurusan Kewirausahaan • FEBI UIN Mataram</div>
+        <p>
+          Lahir di <strong>Mataram, 20 Desember 2004</strong> dan berdomisili di <strong>Kebon Daya Indah, Kel. Pagutan Barat, Kec. Mataram, Kota Mataram, NTB</strong>.
+        </p>
+        <p>
+          Dengan latar belakang pendidikan kewirausahaan serta pengalaman aktif di HMPS Kewirausahaan dan berbagai kepanitiaan kampus, saya senang memadukan keterampilan kreatif dengan semangat kolaborasi.
+        </p>
+        <a href="#kontak" class="btn-berry" style="margin-top: 8px;">Hubungi Saya →</a>
+      </div>
+
+      <div class="berry-stats-stack">
+        <div class="berry-stat-box">
+          <div class="berry-stat-top">☆ HMPS</div>
+          <p>Aktif di HMPS Kewirausahaan FEBI UIN Mataram</p>
+        </div>
+        <div class="berry-stat-box">
+          <div class="berry-stat-top">♡ 3+ Acara</div>
+          <p>Panitia Festival Budaya, Makrab & PBAK</p>
+        </div>
+        <div class="berry-stat-box">
+          <div class="berry-stat-top">✦ 4+ Kriya</div>
+          <p>Sablon Baju, Ecoprint, Batik Jumputan & Kerajinan Tangan</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-block" id="keahlian">
+    <div class="container">
+      <div class="section-header-center">
+        <h2 class="serif-heading">Keahlian & Hobi ✦</h2>
+      </div>
+
+      <div class="skills-4-grid">
+        <div class="skill-item">
+          <div class="skill-circle-icon">👕</div>
+          <h3>Sablon Baju</h3>
+          <p>Keterampilan mencetak desain sablon pada media kaos dan pakaian.</p>
+        </div>
+        <div class="skill-item">
+          <div class="skill-circle-icon">🌿</div>
+          <h3>Ecoprint & Batik Jumputan</h3>
+          <p>Pewarnaan dan pembentukan motif alami pada kain dengan teknik ecoprint serta jumputan.</p>
+        </div>
+        <div class="skill-item">
+          <div class="skill-circle-icon">🍳</div>
+          <h3>Kerajinan & Memasak</h3>
+          <p>Kreasi kerajinan tangan bernilai estetika serta hobi mengolah berbagai hidangan.</p>
+        </div>
+        <div class="skill-item">
+          <div class="skill-circle-icon">🏸</div>
+          <h3>Olahraga Aktif</h3>
+          <p>Menjaga kebugaran dan semangat lewat lari, bersepeda, dan bulu tangkis.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="quote-banner-section">
+    <div class="container">
+      <div class="quote-berry-card">
+        <div>
+          <span class="quote-mark">“</span>
+          <p class="quote-text">
+            Kreativitas yang dipadukan dengan keberanian berwirausaha akan melahirkan karya yang bermakna dan bermanfaat.
+          </p>
+          <span class="quote-author">— Inges Melati</span>
+        </div>
+
+        <div class="moodboard-3-photos">
+          <div class="mood-tile">
+            <span>🎨</span>
+            <strong>Kriya Tekstil</strong>
+            <small>Ecoprint & Jumputan</small>
+          </div>
+          <div class="mood-tile">
+            <span>🤝</span>
+            <strong>Organisasi</strong>
+            <small>HMPS & Kepanitiaan</small>
+          </div>
+          <div class="mood-tile">
+            <span>🚲</span>
+            <strong>Gaya Hidup Aktif</strong>
+            <small>Lari, Sepeda & Badminton</small>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="process-section" id="pendidikan">
+    <div class="container">
+      <div class="section-header-center">
+        <h2 class="serif-heading">Riwayat Pendidikan ✦</h2>
+      </div>
+
+      <div class="edu-process-grid">
+        <div class="edu-step">
+          <span class="step-badge">01</span>
+          <div>
+            <h3>SD</h3>
+            <p><strong>SDN 53 Mataram</strong><br>Pendidikan dasar di Kota Mataram.</p>
+          </div>
+        </div>
+
+        <div class="edu-step">
+          <span class="step-badge">02</span>
+          <div>
+            <h3>SMP</h3>
+            <p><strong>SMPN 7 Mataram</strong><br>Pendidikan menengah pertama di Kota Mataram.</p>
+          </div>
+        </div>
+
+        <div class="edu-step">
+          <span class="step-badge">03</span>
+          <div>
+            <h3>SMA</h3>
+            <p><strong>SMAN 4 Mataram</strong><br>Pendidikan menengah atas sebelum jenjang kuliah.</p>
+          </div>
+        </div>
+
+        <div class="edu-step">
+          <span class="step-badge">04</span>
+          <div>
+            <h3>Universitas</h3>
+            <p><strong>UIN Mataram</strong><br>Jurusan Kewirausahaan (FEBI).</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="contact-footer" id="kontak">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-cta">
+          <span class="script-tag">Mari terhubung ♡</span>
+          <h2 class="serif-heading">Siap Berkolaborasi &amp; Berkarya Bersama?</h2>
+          <p>Hubungi saya langsung melalui WhatsApp atau Instagram untuk diskusi, kegiatan kampus, maupun kolaborasi kreatif.</p>
+          <a href="https://wa.me/6287810239458" target="_blank" rel="noopener" class="btn-berry">Chat WhatsApp →</a>
+        </div>
+
+        <ul class="contact-list">
+          <li>
+            <span class="contact-icon-dot">💬</span>
+            <div>
+              <small style="color: var(--text-muted); display:block;">WhatsApp</small>
+              <a href="https://wa.me/6287810239458" target="_blank" rel="noopener">6287810239458</a>
+            </div>
+          </li>
+          <li>
+            <span class="contact-icon-dot">📷</span>
+            <div>
+              <small style="color: var(--text-muted); display:block;">Instagram</small>
+              <a href="https://www.instagram.com/_.tymelll?dmpr=ZzQ1cDhmcDFiM3hk" target="_blank" rel="noopener">@_.tymelll</a>
+            </div>
+          </li>
+          <li>
+            <span class="contact-icon-dot">📍</span>
+            <div>
+              <small style="color: var(--text-muted); display:block;">Domisili</small>
+              <span>Kebon Daya Indah, Kel. Pagutan Barat, Kec. Mataram, Kota Mataram, NTB</span>
+            </div>
+          </li>
+          <li>
+            <span class="contact-icon-dot">🎂</span>
+            <div>
+              <small style="color: var(--text-muted); display:block;">Tempat, Tanggal Lahir</small>
+              <span>Mataram, 20 Desember 2004</span>
+            </div>
+          </li>
+        </ul>
+
+        <div class="footer-note-card">
+          <p>Mari wujudkan ide kreatif dan langkah wirausaha yang berdampak!</p>
+          <span>♡</span>
+        </div>
+      </div>
+
+      <div class="copyright-bar">
+        © Inges Melati — Jurusan Kewirausahaan, FEBI UIN Mataram
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
+```[cite: 17]
